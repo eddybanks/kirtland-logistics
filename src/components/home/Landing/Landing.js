@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import styles from '../../../assets/Landing.module.css'
+import styles from '../../../stylesheets/Landing.module.css'
 import { Jumbotron } from 'reactstrap'
 
 const landing = props => {
