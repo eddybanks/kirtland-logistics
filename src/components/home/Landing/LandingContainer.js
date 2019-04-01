@@ -6,7 +6,7 @@ class LandingContainer extends Component {
     super(props)
 
     this.state = {
-      title: 'Kirtland Airshow Logistics'
+      title: 'Welcome to the Logistics System for the Kirtland Airshow'
     }
   }
 
