@@ -41,6 +41,7 @@ class Navigation extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <NavItem><NavLink>{Date(Date.now())}</NavLink></NavItem>
               {navigationList.map( navitem => (
                 <NavItem>
                   <Link to={navitem.path}><NavLink>{navitem.name}</NavLink></Link>
