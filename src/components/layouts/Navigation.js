@@ -24,15 +24,33 @@ class Navigation extends React.Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.showTime = this.showTime.bind(this)
     this.state = {
-      isOpen: false
+      isOpen: false,
+      time: '',
+      date: ''
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
+  showTime() {
+    let date = new Date()
+    this.setState({
+      time: date.toLocaleTimeString(),
+      date: date.toString()
+    })
+    setTimeout(this.showTime, 1000)
+  }
+
+  componentWillMount() {
+    this.showTime()
+  }
+
   render() {
     return (
       <div>
@@ -41,7 +59,7 @@ class Navigation extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem><NavLink>{Date(Date.now())}</NavLink></NavItem>
+              <NavItem><NavLink data-toggle="tooltip" data-placement="bottom" title={this.state.date}>{this.state.time}</NavLink></NavItem>
               {navigationList.map( navitem => (
                 <NavItem>
                   <Link to={navitem.path}><NavLink>{navitem.name}</NavLink></Link>
