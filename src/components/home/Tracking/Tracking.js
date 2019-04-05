@@ -39,7 +39,15 @@ const tracking = props => {
           </Form>
         </Col>
         <Col className="col-md-4">
-          <h5 className={styles.centered}>Lot A</h5><hr />
+          {props.updates.map((update) => (
+            <div>
+              <h5 className={styles.centered} key={update.id}>{update.lot}</h5>
+              <ul>
+                {update.info.map(item => <li key={item.id}>{item.title}: {item.value}</li>)}
+              </ul>
+            </div>
+          ))}
+          <h5 className={styles.centered}>{props.updates.lot}</h5><hr />
           <ul>
             <li>Countdown To Close: 30mins 20s</li>
             <li>Maximum Capacity: 40</li>
