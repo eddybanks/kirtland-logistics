@@ -7,11 +7,11 @@ import Header from '../../layouts/Header'
 const zone = props => {
   return (
     <Fragment>
-      <Header header="Zones" />
+      <Header header="Summary" />
       <Container>
         <Row className={styles.ZoneBox}>
           {props.zones.map(zone => (
-            <Col className="col-md-4">
+            <Col className="col-md-6">
               <ZoneCard 
                 name={zone.name} 
                 vehicleCapacity={zone.vehicleCapacity} 

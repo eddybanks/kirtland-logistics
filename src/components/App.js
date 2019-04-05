@@ -6,6 +6,7 @@ import Navigation from './layouts/Navigation'
 import LandingContainer from './home/Landing/LandingContainer'
 import SummaryContainer from './home/Summary/SummaryContainer'
 import ZoneContainer from './home/Zone/ZoneContainer'
+import TrackingContainer from './home/Tracking/TrackingContainer'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/" component={LandingContainer} />
           <Route exact path="/summary" component={SummaryContainer} />
           <Route exact path="/zones" component={ZoneContainer} />
+          <Route exact path="/tracking" component={TrackingContainer} />
         </Switch>
       </Router>
     );

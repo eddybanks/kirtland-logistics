@@ -7,10 +7,8 @@ class ZoneContainer extends Component {
 
     this.state = {
       zones: [
-        { id: 1, name: 'Red', vehicleCapacity: '100' },
-        { id: 2, name: 'Blue', vehicleCapacity: '20' },
-        { id: 3, name: 'Indigo', vehicleCapacity: '340' },
-        { id: 4, name: 'Magenta', vehicleCapacity: '336' }
+        { id: 1, name: 'Red', vehicleCapacity: 100, numberOfLots: 10 },
+        { id: 2, name: 'Blue', vehicleCapacity: 20, numberOfLots: 3 }
       ]
     }
   }

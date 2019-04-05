@@ -11,6 +11,7 @@ const zoneCard = props => {
           <ul>
             <li>Name: {props.name}</li>
             <li>Vehicle Capacity: {props.vehicleCapacity}</li>
+            <li>Number Of Lots: {props.numberOfLots}</li>
           </ul>
         </CardBody>
       </Card>

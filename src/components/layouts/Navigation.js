@@ -15,8 +15,9 @@ import { Link } from 'react-router-dom'
 
 const navigationList = [
   // { id: 1, name: 'Kirtland Airshow Logistics', path: '/' },
-  { id: 2, name: 'Summary', path: '/summary' },
-  { id: 3, name: 'Zones', path: '/zones' }
+  { id: 2, name: 'Summary', path: '/zones' },
+  { id: 3, name: 'Zones', path: '/summary' },
+  { id: 4, name: 'Tracking', path: '/tracking' }
 ]
 
 class Navigation extends React.Component {
