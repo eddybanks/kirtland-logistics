@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "eddybanks.github.io/kirtland-logistics/precache-manifest.e059f5b9e1e8caa7c320921edc7fe4f6.js"
+  "/kirtland-logistics/precache-manifest.ad30da0c6f1ea76e9764d75ae291e606.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("eddybanks.github.io/kirtland-logistics/index.html", {
+workbox.routing.registerNavigationRoute("/kirtland-logistics/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
