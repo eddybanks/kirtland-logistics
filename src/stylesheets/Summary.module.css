@@ -1,8 +1,6 @@
-.SummarySection {
-  text-align: center;
-  justify-content: center;
+.SummaryBox {
 }
 
-.SummarySection .btn-group {
-  text-align: center;
+.SummaryCard {
+  margin: 3%;
 }

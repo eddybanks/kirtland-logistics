@@ -5,7 +5,7 @@ import styles from '../../../stylesheets/Zone.module.css'
 const zoneCard = props => {
   return (
     <Fragment>
-      <Card className={styles.ZoneCard}>
+      <Card className={styles.SummaryCard}>
         <CardHeader>{props.name}</CardHeader>
         <CardBody>
           <ul>

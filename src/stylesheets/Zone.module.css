@@ -1,6 +1,8 @@
-.ZoneBox {
+.ZoneSection {
+  text-align: center;
+  justify-content: center;
 }
 
-.ZoneCard {
-  margin: 3%;
+.ZoneSection .btn-group {
+  text-align: center;
 }
