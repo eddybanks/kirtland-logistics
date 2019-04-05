@@ -2,7 +2,7 @@
   "name": "kirtland-logistics",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https:eddybanks.github.io/kirtland-logistics",
+  "homepage": "https://eddybanks.github.io/kirtland-logistics",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",

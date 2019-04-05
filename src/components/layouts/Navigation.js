@@ -56,7 +56,7 @@ class Navigation extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Kirtland Airshow Logistics</NavbarBrand>
+          <NavbarBrand><Link to="/">Kirtland Airshow Logistics</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
