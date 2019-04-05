@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../stylesheets/App.module.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Navigation from './layouts/Navigation'
 import LandingContainer from './home/Landing/LandingContainer'

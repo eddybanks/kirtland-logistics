@@ -9,15 +9,7 @@ const tracking = props => {
       <Header header="Tracking" />
       <Row>
         <InputGroup className="mx-auto" style={{width: "70vh"}}>
-          <Input type="select" name="select" id="selectTime" placeholder="Select Time">
-            <option>Select Time</option>
-            <option>12:00pm</option>
-            <option>12:30pm</option>
-            <option>1:00pm</option>
-            <option>1:30pm</option>
-            <option>2:00pm</option>
-            <option>2:30pm</option>
-          </Input>
+          <Input type="time" name="select" id="selectTime" min="9:00" max="18:00" step="600" required />
           <Input type="select" name="select" id="selectLot" placeholder="Select Lot">
             <option>Select Parking</option>
             <option>A</option>
@@ -39,12 +31,19 @@ const tracking = props => {
               <Label for="trackingVehicleCount">Vehicle Count</Label>
               <Input id="trackingVehicleCount" type="number" name="vehicleCount" min="1" max="100" />
             </FormGroup>
+            <FormGroup>
+              <Label for="trackingVehicleCount">People Count</Label>
+              <Input id="trackingVehicleCount" type="number" name="vehicleCount" min="1" max="100" />
+            </FormGroup>
+            <Button className="btn btn-block">Enter</Button>
           </Form>
         </Col>
         <Col className="col-md-4">
           <h5 className={styles.centered}>Lot A</h5><hr />
           <ul>
             <li>Countdown To Close: 30mins 20s</li>
+            <li>Maximum Capacity: 40</li>
+            <li>Number of Spots Taken: 10</li>
             <li>Number of Spots Left: 30</li>
           </ul>
         </Col>
