@@ -6,6 +6,7 @@ import ZoneTableEdit from './ZoneTableEdit'
 import { Container, Row, Col, Table, Button, ButtonGroup } from 'reactstrap'
 
 const zone = props => {
+  let editTitle = props.editMode ? "Edit Mode" : "View Mode"
   return (
     <Container>
       <Header header="Zones" />
@@ -13,16 +14,20 @@ const zone = props => {
         <Row>
           <Col>
             <ButtonGroup>
-              <Button>Red</Button>
-              <Button>Blue</Button>
+              { props.zones.map(zone => (
+                <Button>{zone.name}</Button>
+              ))}
+              <Button onClick={props.toggleEdit}>{editTitle}</Button>
             </ButtonGroup>
           </Col>
         </Row>
         <Row className="mt-4">
-          <Col md-12>
-            <ZoneTable {...props} />
-            <ZoneTableEdit {...props} />
-          </Col>
+          {props.zones.map(zone => (
+            <Col md-12>
+              <ZoneTable lots={zone.lots} titles={props.lot_titles} />
+              <ZoneTableEdit lots={zone.lots} titles={props.lot_titles} {...props} />
+            </Col>
+          ))}          
         </Row>
       </section>
     </Container>
