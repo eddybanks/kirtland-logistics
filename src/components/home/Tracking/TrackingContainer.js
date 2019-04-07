@@ -9,9 +9,10 @@ class TrackingContainer extends Component {
       updates: [
         { id: 1, lot: 'Lot A', 
           info: [
-            { id: 1, title: 'countdownToClose', value: 43 }, 
-            { id: 2, title: 'maxCapacity', value: 32 },
-            { id: 3, title: 'spotsTaken', value: 10 }
+            { id: 1, title: 'Countdown To Close', value: 43, type: 'number', min: 0, max: 50 }, 
+            { id: 2, title: 'Max Capacity', value: 32, type: 'number', min: 0, max: 50 },
+            { id: 3, title: 'Spots Taken', value: 10, type: 'number', min: 0, max: 50 },
+            { id: 4, title: 'Spots Left', value: null }
           ] 
         }
       ]
