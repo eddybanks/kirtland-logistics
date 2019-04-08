@@ -1,15 +1,15 @@
 {
-  "main.css": "/kirtland-logistics/static/css/main.8fb71c49.chunk.css",
-  "main.js": "/kirtland-logistics/static/js/main.cd5fc892.chunk.js",
-  "main.js.map": "/kirtland-logistics/static/js/main.cd5fc892.chunk.js.map",
+  "main.css": "/kirtland-logistics/static/css/main.125886d2.chunk.css",
+  "main.js": "/kirtland-logistics/static/js/main.ab2e0615.chunk.js",
+  "main.js.map": "/kirtland-logistics/static/js/main.ab2e0615.chunk.js.map",
   "runtime~main.js": "/kirtland-logistics/static/js/runtime~main.40b0cc18.js",
   "runtime~main.js.map": "/kirtland-logistics/static/js/runtime~main.40b0cc18.js.map",
   "static/css/2.b7ad565d.chunk.css": "/kirtland-logistics/static/css/2.b7ad565d.chunk.css",
-  "static/js/2.db662a58.chunk.js": "/kirtland-logistics/static/js/2.db662a58.chunk.js",
-  "static/js/2.db662a58.chunk.js.map": "/kirtland-logistics/static/js/2.db662a58.chunk.js.map",
+  "static/js/2.7a6a6b0c.chunk.js": "/kirtland-logistics/static/js/2.7a6a6b0c.chunk.js",
+  "static/js/2.7a6a6b0c.chunk.js.map": "/kirtland-logistics/static/js/2.7a6a6b0c.chunk.js.map",
   "index.html": "/kirtland-logistics/index.html",
-  "precache-manifest.40d8f8e7ecf61ff8fd69a4bc8d916ff0.js": "/kirtland-logistics/precache-manifest.40d8f8e7ecf61ff8fd69a4bc8d916ff0.js",
+  "precache-manifest.4f2073fac4d9e26cec554f4d285f367c.js": "/kirtland-logistics/precache-manifest.4f2073fac4d9e26cec554f4d285f367c.js",
   "service-worker.js": "/kirtland-logistics/service-worker.js",
   "static/css/2.b7ad565d.chunk.css.map": "/kirtland-logistics/static/css/2.b7ad565d.chunk.css.map",
-  "static/css/main.8fb71c49.chunk.css.map": "/kirtland-logistics/static/css/main.8fb71c49.chunk.css.map"
+  "static/css/main.125886d2.chunk.css.map": "/kirtland-logistics/static/css/main.125886d2.chunk.css.map"
 }

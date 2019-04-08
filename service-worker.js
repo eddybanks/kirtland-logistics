@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/kirtland-logistics/precache-manifest.40d8f8e7ecf61ff8fd69a4bc8d916ff0.js"
+  "/kirtland-logistics/precache-manifest.4f2073fac4d9e26cec554f4d285f367c.js"
 );
 
 workbox.clientsClaim();
