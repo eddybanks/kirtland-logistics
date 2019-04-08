@@ -93,9 +93,9 @@ class ZoneContainer extends Component {
       <Fragment>
         <Zone zones={this.state.zones} 
           lot_titles={this.state.lot_titles} 
-          toggleEdit={this.state.toggleEditHandler}
           editMode={this.state.editMode}
-          inputLot={this.state.inputLotHandler} />
+          toggleEdit={this.toggleEditHandler}
+          inputLot={this.inputLotHandler} />
       </Fragment>
     )
   }

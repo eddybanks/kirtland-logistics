@@ -2,7 +2,7 @@ import React from 'react'
 import { Input } from 'reactstrap'
 
 const FormInput = props => {
-  if (props.type == 'number') {
+  if (props.type === 'number') {
     return (
       <Input 
         type='number' 
@@ -11,9 +11,9 @@ const FormInput = props => {
         max={props.max}
         defaultValue={props.defaultValue} />
       )
-  } else if (props.type == 'string') {
+  } else if (props.type === 'string') {
     return <Input />
-  } else if (props.type == 'time') {
+  } else if (props.type === 'time') {
     return <Input />
   }
   else {
