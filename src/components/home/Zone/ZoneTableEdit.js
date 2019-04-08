@@ -4,9 +4,9 @@ import { FormInput } from '../../forms/FormInput'
 
 const zoneTableEdit = props => (
   <Fragment>
-    <UncontrolledAlert color="success">
+    {/* <UncontrolledAlert color="success">
       You can now edit this table
-    </UncontrolledAlert>
+    </UncontrolledAlert> */}
     <Table size="sm" bordered hover>
       <thead>
         <tr>
