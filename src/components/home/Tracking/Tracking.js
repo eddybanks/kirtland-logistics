@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Header from '../../layouts/Header'
 import TrackingUpdates from './TrackingUpdates'
 import styles from '../../../stylesheets/Tracking.module.css'
@@ -41,7 +41,7 @@ const tracking = props => {
         </Col>
         <Col className="col-md-4">
           {props.updates.map((update) => (
-            <div>
+            <div key={update.id}>
               <h5 className={styles.centered} key={update.id}>{update.lot}</h5>
               <TrackingUpdates updates={update.info} />
             </div>

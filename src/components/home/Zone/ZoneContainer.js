@@ -92,7 +92,6 @@ class ZoneContainer extends Component {
     this.setState({
       editMode: !editMode
     })
-    console.log(this.state.editMode)
   }
 
   inputLotHandler = (e) => {

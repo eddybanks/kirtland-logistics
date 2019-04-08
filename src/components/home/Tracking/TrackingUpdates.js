@@ -6,7 +6,7 @@ const trackingUpdates = props => {
     <Fragment>
       <ListGroup>
         {props.updates.map(update => (          
-          <ListGroupItem className="d-flex justify-content-between align-items-center">
+          <ListGroupItem className="d-flex justify-content-between align-items-center" key={update.id}>
             {update.title}
             <Badge pill>{update.value}</Badge>
           </ListGroupItem>

@@ -6,11 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap'
+  NavLink
+ } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
 const navigationList = [
@@ -56,14 +53,14 @@ class Navigation extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand><Link to="/">Kirtland Airshow Logistics</Link></NavbarBrand>
+          <NavbarBrand tag={Link} to="/">Kirtland Airshow Logistics</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem><NavLink data-toggle="tooltip" data-placement="bottom" title={this.state.date}>{this.state.time}</NavLink></NavItem>
               {navigationList.map( navitem => (
                 <NavItem key={navitem.id}>
-                  <Link to={navitem.path}><NavLink>{navitem.name}</NavLink></Link>
+                  <NavLink tag={Link} to={navitem.path}>{navitem.name}</NavLink>
                 </NavItem>
               ))}
             </Nav>

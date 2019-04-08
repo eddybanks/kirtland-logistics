@@ -11,7 +11,7 @@ const summary = props => {
       <Container>
         <Row className={styles.SummaryBox}>
           {props.zones.map(zone => (
-            <Col className="col-md-6">
+            <Col className="col-md-6" key={zone.id}>
               <SummaryCard 
                 name={zone.name} 
                 vehicleCapacity={zone.vehicleCapacity} 

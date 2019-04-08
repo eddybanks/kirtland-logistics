@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styles from '../../../stylesheets/Zone.module.css'
 import Header from '../../layouts/Header'
 import ZoneTable from './ZoneTable'
 import ZoneTableEdit from './ZoneTableEdit'
-import { Container, Row, Col, Button, ButtonGroup, TabPane, TabContent, NavLink, Nav } from 'reactstrap'
+import { Container, Row, Col, Button, ButtonGroup, TabPane, TabContent } from 'reactstrap'
 import classnames from 'classnames'
 
 const zone = props => {

@@ -14,8 +14,8 @@ const zoneTable = props => (
       </thead>
       <tbody>
         {props.lots.map(lot => (
-          <tr>
-            <td key={"lot " + lot.id}>{lot.name}</td>
+          <tr key={"lot " + lot.id}>
+            <td>{lot.name}</td>
             {lot.details.map(info => (
               <td key={"detail " + info.id}>{info.value}</td>
             ))}

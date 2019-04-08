@@ -19,8 +19,8 @@ const zoneTableEdit = props => (
       </thead>
       <tbody>
         {props.lots.map(lot => (
-          <tr>
-            <td key={"elot " + lot.id}>{lot.name}</td>
+          <tr key={"elot " + lot.id}>
+            <td>{lot.name}</td>
             {lot.details.map(info => (
               <td key={"edetail " + info.id}><FormInput defaultValue={info.value} type={info.type} /></td>
             ))}
