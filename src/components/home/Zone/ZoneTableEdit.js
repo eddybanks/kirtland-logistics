@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Table } from 'reactstrap'
+import { FormInput } from '../../forms/FormInput'
 
 const zoneTableEdit = props => (
   <Fragment>
@@ -8,7 +9,7 @@ const zoneTableEdit = props => (
         <tr>
           <th>Lot</th>
           {props.titles.map(title => (
-            <th key={"title " + title.id}>{title.title}</th>
+            <th key={"etitle " + title.id}>{title.title}</th>
           ))}
           <th colSpan="2"></th>
         </tr>
@@ -16,9 +17,9 @@ const zoneTableEdit = props => (
       <tbody>
         {props.lots.map(lot => (
           <tr>
-            <td key={"lot " + lot.id}>{lot.name}</td>
+            <td key={"elot " + lot.id}>{lot.name}</td>
             {lot.details.map(info => (
-              <td key={"detail " + info.id}><input value={info.value} /></td>
+              <td key={"edetail " + info.id}><FormInput defaultValue={info.value} type={info.type} /></td>
             ))}
             <td>Edit</td>
             <td>Delete</td>

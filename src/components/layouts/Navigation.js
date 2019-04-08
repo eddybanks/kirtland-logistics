@@ -62,7 +62,7 @@ class Navigation extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem><NavLink data-toggle="tooltip" data-placement="bottom" title={this.state.date}>{this.state.time}</NavLink></NavItem>
               {navigationList.map( navitem => (
-                <NavItem>
+                <NavItem key={navitem.id}>
                   <Link to={navitem.path}><NavLink>{navitem.name}</NavLink></Link>
                 </NavItem>
               ))}

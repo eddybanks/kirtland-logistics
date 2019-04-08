@@ -76,9 +76,16 @@ class ZoneContainer extends Component {
   }
 
   toggleEditHandler = () => {
+    let editMode = this.state.editMode
     this.setState({
-      toggleEdit: !this.state.toggleEdit
+      editMode: !editMode
     })
+    console.log(this.state.editMode)
+  }
+
+  inputLotHandler = (e) => {
+    let value = e.target.value
+    console.log(value)
   }
 
   render() {
@@ -87,7 +94,8 @@ class ZoneContainer extends Component {
         <Zone zones={this.state.zones} 
           lot_titles={this.state.lot_titles} 
           toggleEdit={this.state.toggleEditHandler}
-          editMode={this.editMode} />
+          editMode={this.state.editMode}
+          inputLot={this.state.inputLotHandler} />
       </Fragment>
     )
   }

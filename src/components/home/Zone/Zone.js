@@ -12,10 +12,10 @@ const zone = props => {
       <Header header="Zones" />
       <section className={styles.ZoneSection}>
         <Row>
-          <Col>
+          <Col className="md-12">
             <ButtonGroup>
               { props.zones.map(zone => (
-                <Button>{zone.name}</Button>
+                <Button key={"zone_name " + zone.id}>{zone.name}</Button>
               ))}
               <Button onClick={props.toggleEdit}>{editTitle}</Button>
             </ButtonGroup>
@@ -24,8 +24,14 @@ const zone = props => {
         <Row className="mt-4">
           {props.zones.map(zone => (
             <Col md-12>
-              <ZoneTable lots={zone.lots} titles={props.lot_titles} />
-              <ZoneTableEdit lots={zone.lots} titles={props.lot_titles} {...props} />
+              <ZoneTable 
+                key={"zone " + zone.id} 
+                lots={zone.lots} 
+                titles={props.lot_titles} />
+              <ZoneTableEdit 
+                key={"zone_edit " + zone.id} 
+                lots={zone.lots} 
+                titles={props.lot_titles} />
             </Col>
           ))}          
         </Row>
