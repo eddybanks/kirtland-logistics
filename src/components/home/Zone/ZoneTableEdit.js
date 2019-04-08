@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react'
-import { Table, Alert } from 'reactstrap'
+import { Table, UncontrolledAlert } from 'reactstrap'
 import { FormInput } from '../../forms/FormInput'
 
 const zoneTableEdit = props => (
   <Fragment>
-  <Alert color="success">You can now edit this table</Alert>
+    <UncontrolledAlert color="success">
+      You can now edit this table
+    </UncontrolledAlert>
     <Table size="sm" bordered hover>
       <thead>
         <tr>

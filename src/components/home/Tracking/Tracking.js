@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Header from '../../layouts/Header'
+import TrackingUpdates from './TrackingUpdates'
 import styles from '../../../stylesheets/Tracking.module.css'
 import { Container, Row, Col, InputGroup, InputGroupAddon, Input, Button, Form, FormGroup, Label  } from 'reactstrap'
 
@@ -42,18 +43,9 @@ const tracking = props => {
           {props.updates.map((update) => (
             <div>
               <h5 className={styles.centered} key={update.id}>{update.lot}</h5>
-              <ul>
-                {update.info.map(item => <li key={item.id}>{item.title}: {item.value}</li>)}
-              </ul>
+              <TrackingUpdates updates={update.info} />
             </div>
           ))}
-          <h5 className={styles.centered}>{props.updates.lot}</h5><hr />
-          <ul>
-            <li>Countdown To Close: 30mins 20s</li>
-            <li>Maximum Capacity: 40</li>
-            <li>Number of Spots Taken: 10</li>
-            <li>Number of Spots Left: 30</li>
-          </ul>
         </Col>
       </Row>
     </Container>

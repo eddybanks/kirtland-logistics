@@ -20,7 +20,8 @@ class TrackingContainer extends Component {
   }
 
   render() {
-    return <Tracking updates={this.state.updates} />
+    return <Tracking 
+      updates={this.state.updates} />
   }
 }
 

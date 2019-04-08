@@ -8,6 +8,7 @@ class ZoneContainer extends Component {
     this.toggleEditHandler = this.toggleEditHandler.bind(this)
 
     this.state = {
+      // For toggling between Edit and View Modes
       editMode: false,
       lot_titles: [
         { id: 1, title: 'Vehicle Capacity', type: 'number' },
