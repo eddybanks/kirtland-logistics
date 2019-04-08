@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/kirtland-logistics/static/js/runtime~main.40b0cc18.js"
   },
   {
-    "revision": "72565a63907db36098d6",
-    "url": "/kirtland-logistics/static/js/main.e388c243.chunk.js"
+    "revision": "0ba42295ecd4fb043a90",
+    "url": "/kirtland-logistics/static/js/main.30fdcf2a.chunk.js"
   },
   {
-    "revision": "f3a0a81dd8ee0be2b43f",
-    "url": "/kirtland-logistics/static/js/2.45c42b7f.chunk.js"
+    "revision": "6074945f4d1dcf410bf3",
+    "url": "/kirtland-logistics/static/js/2.2ea36be5.chunk.js"
   },
   {
-    "revision": "72565a63907db36098d6",
+    "revision": "0ba42295ecd4fb043a90",
     "url": "/kirtland-logistics/static/css/main.125886d2.chunk.css"
   },
   {
-    "revision": "f3a0a81dd8ee0be2b43f",
+    "revision": "6074945f4d1dcf410bf3",
     "url": "/kirtland-logistics/static/css/2.b7ad565d.chunk.css"
   },
   {
-    "revision": "dd9d854c41a8987ec705d131bd18d7a6",
+    "revision": "a6cf81bbbf6d7dae38234a5283870395",
     "url": "/kirtland-logistics/index.html"
   }
 ];
