@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react'
-import { Table } from 'reactstrap'
+import { Table, Alert } from 'reactstrap'
 import { FormInput } from '../../forms/FormInput'
 
 const zoneTableEdit = props => (
   <Fragment>
+  <Alert color="success">You can now edit this table</Alert>
     <Table size="sm" bordered hover>
       <thead>
         <tr>
@@ -11,7 +12,7 @@ const zoneTableEdit = props => (
           {props.titles.map(title => (
             <th key={"etitle " + title.id}>{title.title}</th>
           ))}
-          <th colSpan="2"></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -21,11 +22,10 @@ const zoneTableEdit = props => (
             {lot.details.map(info => (
               <td key={"edetail " + info.id}><FormInput defaultValue={info.value} type={info.type} /></td>
             ))}
-            <td>Edit</td>
             <td>Delete</td>
           </tr>
         ))}
-        <tr><td colSpan={props.titles.length + 3}>Add Row</td></tr>
+        <tr><td colSpan={props.titles.length + 2}>Add Row</td></tr>
       </tbody>
     </Table>    
   </Fragment>

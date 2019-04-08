@@ -10,7 +10,6 @@ const zoneTable = props => (
           {props.titles.map(title => (
             <th key={"title " + title.id}>{title.title}</th>
           ))}
-          <th colSpan="2"></th>
         </tr>
       </thead>
       <tbody>
@@ -20,11 +19,8 @@ const zoneTable = props => (
             {lot.details.map(info => (
               <td key={"detail " + info.id}>{info.value}</td>
             ))}
-            <td>Edit</td>
-            <td>Delete</td>
           </tr>
         ))}
-        <tr><td colSpan={props.titles.length + 3}>Add Row</td></tr>
       </tbody>
     </Table>    
   </Fragment>

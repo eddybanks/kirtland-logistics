@@ -7,6 +7,20 @@ import { Container, Row, Col, Table, Button, ButtonGroup } from 'reactstrap'
 
 const zone = props => {
   let editTitle = props.editMode ? "Edit Mode" : "View Mode"
+  let zoneTable = props.zones.map(zone => (
+    <Col className="col-md-12"> 
+      { props.editMode ?
+      <ZoneTableEdit 
+        key={"zone_edit " + zone.id} 
+        lots={zone.lots} 
+        titles={props.lot_titles} /> :
+      <ZoneTable 
+        key={"zone " + zone.id} 
+        lots={zone.lots} 
+        titles={props.lot_titles} />
+      }
+    </Col>
+  ))
   return (
     <Container>
       <Header header="Zones" />
@@ -17,23 +31,12 @@ const zone = props => {
               { props.zones.map(zone => (
                 <Button key={"zone_name " + zone.id}>{zone.name}</Button>
               ))}
-              <Button onClick={props.toggleEdit}>{editTitle}</Button>
+              <Button outline onClick={props.toggleEdit}>{editTitle}</Button>
             </ButtonGroup>
           </Col>
         </Row>
         <Row className="mt-4">
-          {props.zones.map(zone => (
-            <Col md-12>
-              <ZoneTable 
-                key={"zone " + zone.id} 
-                lots={zone.lots} 
-                titles={props.lot_titles} />
-              <ZoneTableEdit 
-                key={"zone_edit " + zone.id} 
-                lots={zone.lots} 
-                titles={props.lot_titles} />
-            </Col>
-          ))}          
+          {zoneTable}
         </Row>
       </section>
     </Container>
