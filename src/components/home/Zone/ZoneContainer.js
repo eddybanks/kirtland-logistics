@@ -108,6 +108,7 @@ class ZoneContainer extends Component {
           editMode={this.state.editMode}
           toggleEdit={this.toggleEditHandler}
           inputLot={this.inputLotHandler}
+          handleZoneChange={this.handleZoneChange}
           toggleZoneTab={this.toggleZoneTab} />
       </Fragment>
     )
