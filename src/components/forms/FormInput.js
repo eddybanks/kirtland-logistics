@@ -14,13 +14,19 @@ const FormInput = props => {
         max={props.max}
         defaultValue={props.defaultValue} />
       )
-  } else if (props.type === 'string') {
-    return <Input />
+  } else if (props.type === 'text') {
+    return <Input 
+      className={inputClass}
+      type='text' 
+      id={props.id}
+      defaultValue={props.defaultValue} />
   } else if (props.type === 'time') {
-    return <Input />
+    return <Input 
+    className={inputClass}/>
   }
   else {
-    return <Input />
+    return <Input 
+    className={inputClass}/>
   }
 }
 

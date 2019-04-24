@@ -20,7 +20,7 @@ const GET_INFO = gql`
 `
 class App extends Component {
   state = {
-    logged_in: false
+    logged_in: true
   }
 
   render() {

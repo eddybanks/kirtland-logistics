@@ -20,14 +20,14 @@ const zoneTableEdit = props => (
       <tbody>
         {props.lots.map(lot => (
           <tr key={"elot " + lot.id}>
-            <td>{lot.name}</td>
+            <td><FormInput defaultValue={lot.name} type='text' /></td>
             {lot.details.map(info => (
               <td key={"edetail " + info.id}><FormInput defaultValue={info.value} type={info.type} /></td>
             ))}
-            <td>Delete</td>
+            <td onClick={props.deleteParking} >Delete</td>
           </tr>
         ))}
-        <tr><td colSpan={props.titles.length + 2}>Add Row</td></tr>
+        <tr><td colSpan={props.titles.length + 2} onClick={() => { props.addRow(props.zoneIndex)}} >Add Parking Lot</td></tr>
       </tbody>
     </Table>    
   </Fragment>

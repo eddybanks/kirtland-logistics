@@ -16,7 +16,10 @@ const zone = props => {
           <ZoneTableEdit 
             key={"zone_edit " + zone.id} 
             lots={zone.lots} 
-            titles={props.lot_titles} /> :
+            titles={props.lot_titles}
+            addRow={props.addRow}
+            zoneIndex={index}
+            deleteParking={props.deleteParking} /> :
           <ZoneTable 
             key={"zone " + zone.id} 
             lots={zone.lots} 

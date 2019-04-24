@@ -99,6 +99,37 @@ class ZoneContainer extends Component {
     console.log(value)
   }
 
+  addRowHandler = (index) => {
+    let newLot = {
+      id: 40,
+      name: '',
+      details: [
+        { id: 1, title: 'Vehicle Capacity', value: 0, type: 'number' },
+        { id: 2, title: 'Current Vehicle Count', value: 0, type: 'number'},
+        { id: 3, title: 'Estimated Travel Distance', value: 0, type: 'number'},
+        { id: 4, title: 'Estimated Travel Time', value: 0, type: 'number'}
+      ]
+    }
+
+    let zones = [...this.state.zones]
+    let lots = zones[index].lots
+    lots.push(newLot)
+    zones[index].lots = lots
+    this.setState({
+      zones: zones
+    })
+  }
+
+  deleteParkingHandler = (index) => {
+    const zones = [...this.state.zones]
+    let lots = zones[0].lots
+    lots.splice(index, 1)
+    zones[0].lots = lots
+    this.setState({
+      zones: zones
+    })
+  }
+
   render() {
     return (
       <Fragment>
@@ -109,7 +140,9 @@ class ZoneContainer extends Component {
           toggleEdit={this.toggleEditHandler}
           inputLot={this.inputLotHandler}
           handleZoneChange={this.handleZoneChange}
-          toggleZoneTab={this.toggleZoneTab} />
+          toggleZoneTab={this.toggleZoneTab}
+          addRow={this.addRowHandler}
+          deleteParking={this.deleteParkingHandler} />
       </Fragment>
     )
   }
