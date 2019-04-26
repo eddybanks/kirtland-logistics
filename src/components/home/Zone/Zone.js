@@ -15,10 +15,10 @@ const zone = props => {
           { props.editMode ?
           <ZoneTableEdit 
             key={"zone_edit " + zone.id} 
-            lots={zone.lots} 
+            zone={zone} 
             titles={props.lot_titles}
             addRow={props.addRow}
-            zoneIndex={index}
+            onChange={props.onChange}
             deleteParking={props.deleteParking} /> :
           <ZoneTable 
             key={"zone " + zone.id} 

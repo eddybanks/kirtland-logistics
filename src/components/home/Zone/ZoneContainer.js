@@ -7,6 +7,8 @@ class ZoneContainer extends Component {
 
     this.toggleEditHandler = this.toggleEditHandler.bind(this)
     this.toggleZoneTab = this.toggleZoneTab.bind(this)
+    this.changeTextHandler = this.changeTextHandler.bind(this)
+    this.deleteParkingHandler = this.deleteParkingHandler.bind(this)
 
     this.state = {
       // For toggling between selected Zones
@@ -99,7 +101,7 @@ class ZoneContainer extends Component {
     console.log(value)
   }
 
-  addRowHandler = (index) => {
+  addRowHandler = (id) => {
     let newLot = {
       id: 40,
       name: '',
@@ -111,6 +113,7 @@ class ZoneContainer extends Component {
       ]
     }
 
+    const index = this.state.zones.findIndex(z => { return z.id === id })
     let zones = [...this.state.zones]
     let lots = zones[index].lots
     lots.push(newLot)
@@ -120,14 +123,48 @@ class ZoneContainer extends Component {
     })
   }
 
-  deleteParkingHandler = (index) => {
+  deleteParkingHandler = (zid, lid) => {
     const zones = [...this.state.zones]
-    let lots = zones[0].lots
-    lots.splice(index, 1)
-    zones[0].lots = lots
+    const zoneIndex = zones.findIndex( z => { return z.id === zid})
+    let lots = zones[zoneIndex].lots
+    const lotIndex = lots.findIndex(l => { return l.id === lid })
+    lots.splice(lotIndex, 1)
+    zones[zoneIndex].lots = lots
     this.setState({
       zones: zones
     })
+  }
+
+  changeTextHandler = (e, lid, zid, did) => {
+    const zoneIndex = this.state.zones.findIndex( z => {
+      return z.id === zid
+    })
+
+    const zone = {
+      ...this.state.zones[zoneIndex]
+    }
+
+    const lotIndex = zone.lots.findIndex( l => {
+      return l.id === lid
+    })
+
+    const lot = {
+      ...zone.lots[lotIndex]
+    }
+
+    if (did) {
+      const detailsIndex = lot.details.findIndex(d => { return d.id === did})
+      lot.details[detailsIndex].value = e.target.value
+    } else {
+      lot.name = e.target.value
+    } 
+
+    const zones = [...this.state.zones]
+    zones[zoneIndex].lots[lotIndex] = lot
+    this.setState({
+      zones: zones
+    })
+    console.log(this.state.zones)
   }
 
   render() {
@@ -142,6 +179,7 @@ class ZoneContainer extends Component {
           handleZoneChange={this.handleZoneChange}
           toggleZoneTab={this.toggleZoneTab}
           addRow={this.addRowHandler}
+          onChange={this.changeTextHandler}
           deleteParking={this.deleteParkingHandler} />
       </Fragment>
     )

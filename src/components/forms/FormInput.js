@@ -12,21 +12,24 @@ const FormInput = props => {
         id={props.id}
         min={props.min}
         max={props.max}
-        defaultValue={props.defaultValue} />
+        onChange={props.onChange}
+        value={props.value} />
       )
   } else if (props.type === 'text') {
     return <Input 
       className={inputClass}
       type='text' 
       id={props.id}
-      defaultValue={props.defaultValue} />
+      onChange={props.onChange}
+      value={props.value} />
   } else if (props.type === 'time') {
     return <Input 
     className={inputClass}/>
   }
   else {
     return <Input 
-    className={inputClass}/>
+    className={inputClass}
+    onChange={props.onChange} />
   }
 }
 
