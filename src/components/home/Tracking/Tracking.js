@@ -2,36 +2,38 @@ import React from 'react'
 import Header from '../../layouts/Header'
 import TrackingUpdates from './TrackingUpdates'
 import styles from '../../../stylesheets/Tracking.module.css'
-import { Container, Row, Col, InputGroup, InputGroupAddon, Input, Button, Form, FormGroup, Label  } from 'reactstrap'
+import { Container, 
+  Row, Col, InputGroup, InputGroupAddon, Input, Button, Form, FormGroup, Label,
+  Progress  } from 'reactstrap'
 
 const tracking = props => {
   return (
     <Container>
       <Header header="Tracking" />
+      <div className="text-center">35%</div>
+      <Progress value={35} striped color="warning" className="mb-4" />
       <Row>
-        <InputGroup className="mx-auto" style={{width: "70vh"}}>
+        <Col className="col-md-8 mt-4">
+        <InputGroup className="mx-auto mb-4" style={{width: "70vh"}}>
           <Input type="time" name="select" id="selectTime" min="9:00" max="18:00" step="600" required />
           <Input type="select" name="select" id="selectLot" placeholder="Select Lot">
-            <option>Select Parking</option>
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-            <option>D</option>
-            <option>E</option>
-            <option>F</option>
+            <option>Select Lot</option>
+            <option>Lot 1</option>
+            <option>Lot 2</option>
+            <option>Lot 3</option>
+            <option>Lot 4</option>
+            <option>Lot 5</option>
+            <option>Lot 6</option>
           </Input>
           <InputGroupAddon addonType="append">
             <Button>Submit</Button>
           </InputGroupAddon>
         </InputGroup>
-      </Row>
-      <Row className="mt-4">
-        <Col className="col-md-8">
           <Form>
-            <FormGroup>
+            {/* <FormGroup>
               <Label for="trackingVehicleCount">Vehicle Count</Label>
               <Input id="trackingVehicleCount" type="number" name="vehicleCount" min="1" max="100" />
-            </FormGroup>
+            </FormGroup> */}
             <FormGroup>
               <Label for="trackingVehicleCount">People Count</Label>
               <Input id="trackingVehicleCount" type="number" name="vehicleCount" min="1" max="100" />

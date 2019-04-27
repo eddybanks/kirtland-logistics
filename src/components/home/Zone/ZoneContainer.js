@@ -17,33 +17,33 @@ class ZoneContainer extends Component {
       editMode: false,
       lot_titles: [
         { id: 1, title: 'Vehicle Capacity', type: 'number' },
-        { id: 2, title: 'Current Vehicle Count', type: 'number' },
+        { id: 2, title: 'Passenger Capacity', value: 2324, type: 'number'},
         { id: 3, title: 'Estimated Travel Distance', type: 'number' },
         { id: 4, title: 'Estimated Travel Time', type: 'number' }
       ],
       zones: [
         { id: 1, name: 'Red',
           lots: [
-            { id: 1, name: 'A', 
+            { id: 1, name: 'Lot 1', 
               details: [
                 { id: 1, title: 'Vehicle Capacity', value: 20, type: 'number' },
-                { id: 2, title: 'Current Vehicle Count', value: 12, type: 'number'},
+                { id: 2, title: 'Passenger Capacity', value: 2324, type: 'number'},
                 { id: 3, title: 'Estimated Travel Distance', value: 23, type: 'number'},
                 { id: 4, title: 'Estimated Travel Time', value: 20, type: 'number'}
               ]
             },
-            { id: 2, name: 'B', 
+            { id: 2, name: 'Lot 2', 
               details: [
                 { id: 1, title: 'Vehicle Capacity', value: 20, type: 'number' },
-                { id: 2, title: 'Current Vehicle Count', value: 12, type: 'number'},
+                { id: 2, title: 'Passenger Capacity', value: 2324, type: 'number'},
                 { id: 3, title: 'Estimated Travel Distance', value: 23, type: 'number'},
                 { id: 4, title: 'Estimated Travel Time', value: 20, type: 'number'}
               ]
             },
-            { id: 3, name: 'C', 
+            { id: 3, name: 'Lot 3', 
               details: [
                 { id: 1, title: 'Vehicle Capacity', value: 20, type: 'number' },
-                { id: 2, title: 'Current Vehicle Count', value: 12, type: 'number'},
+                { id: 2, title: 'Passenger Capacity', value: 2324, type: 'number'},
                 { id: 3, title: 'Estimated Travel Distance', value: 23, type: 'number'},
                 { id: 4, title: 'Estimated Travel Time', value: 20, type: 'number'}
               ]
@@ -54,7 +54,7 @@ class ZoneContainer extends Component {
           { id: 1, name: 'A', 
             details: [
               { id: 1, title: 'Vehicle Capacity', value: 21, type: 'number' },
-              { id: 2, title: 'Current Vehicle Count', value: 32, type: 'number'},
+              { id: 2, title: 'Passenger Capacity', value: 2324, type: 'number'},
               { id: 3, title: 'Estimated Travel Distance', value: 23, type: 'number'},
               { id: 4, title: 'Estimated Travel Time', value: 20, type: 'number'}
             ]
@@ -62,7 +62,7 @@ class ZoneContainer extends Component {
           { id: 2, name: 'B', 
             details: [
               { id: 1, title: 'Vehicle Capacity', value: 43, type: 'number' },
-              { id: 2, title: 'Current Vehicle Count', value: 24, type: 'number'},
+              { id: 2, title: 'Passenger Capacity', value: 2324, type: 'number'},
               { id: 3, title: 'Estimated Travel Distance', value: 23, type: 'number'},
               { id: 4, title: 'Estimated Travel Time', value: 12, type: 'number'}
             ]
@@ -70,7 +70,7 @@ class ZoneContainer extends Component {
           { id: 3, name: 'C', 
             details: [
               { id: 1, title: 'Vehicle Capacity', value: 43, type: 'number' },
-              { id: 2, title: 'Current Vehicle Count', value: 43, type: 'number'},
+              { id: 2, title: 'Passenger Capacity', value: 43, type: 'number'},
               { id: 3, title: 'Estimated Travel Distance', value: 23, type: 'number'},
               { id: 4, title: 'Estimated Travel Time', value: 20, type: 'number'}
             ]
@@ -102,14 +102,15 @@ class ZoneContainer extends Component {
   }
 
   addRowHandler = (id) => {
+    const newid = Math.floor(Math.random() * 100000000) + 10
     let newLot = {
-      id: 40,
+      id: newid,
       name: '',
       details: [
-        { id: 1, title: 'Vehicle Capacity', value: 0, type: 'number' },
-        { id: 2, title: 'Current Vehicle Count', value: 0, type: 'number'},
-        { id: 3, title: 'Estimated Travel Distance', value: 0, type: 'number'},
-        { id: 4, title: 'Estimated Travel Time', value: 0, type: 'number'}
+        { id: 1, title: 'Vehicle Capacity', value: null, type: 'number' },
+        { id: 2, title: 'Passenger Capacity', value: null, type: 'number'},
+        { id: 3, title: 'Estimated Travel Distance', value: null, type: 'number'},
+        { id: 4, title: 'Estimated Travel Time', value: null, type: 'number'}
       ]
     }
 

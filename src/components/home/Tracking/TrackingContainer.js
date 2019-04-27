@@ -7,12 +7,12 @@ class TrackingContainer extends Component {
 
     this.state = {
       updates: [
-        { id: 1, lot: 'Lot A', 
+        { id: 1, lot: 'Lot 1', 
           info: [
             { id: 1, title: 'Countdown To Close', value: 43, type: 'number', min: 0, max: 50 }, 
-            { id: 2, title: 'Max Capacity', value: 32, type: 'number', min: 0, max: 50 },
-            { id: 3, title: 'Spots Taken', value: 10, type: 'number', min: 0, max: 50 },
-            { id: 4, title: 'Spots Left', value: null }
+            { id: 2, title: 'Max Passenger Capacity', value: 5000, type: 'number', min: 0, max: 5000 },
+            { id: 3, title: 'Passengers Arrived', value: 2332, type: 'number', min: 0, max: 50 },
+            { id: 4, title: 'Passengers Left to Limit', value: 5000 - 2332 }
           ] 
         }
       ]
