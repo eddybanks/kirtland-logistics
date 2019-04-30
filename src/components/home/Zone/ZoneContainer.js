@@ -12,7 +12,7 @@ class ZoneContainer extends Component {
 
     this.state = {
       // For toggling between selected Zones
-      activeZoneTab: 'tab 0',
+      activeZoneTab: 'Red',
       // For toggling between Edit and View Modes
       editMode: false,
       lot_titles: [

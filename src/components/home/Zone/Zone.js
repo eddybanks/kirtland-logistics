@@ -9,7 +9,7 @@ import classnames from 'classnames'
 const zone = props => {
   let editTitle = props.editMode ? "Edit Mode" : "View Mode"
   let zoneTable = props.zones.map((zone, index) => (
-    <TabPane tabId={"tab " + index} key={"tabkey "+ zone.id}>
+    <TabPane tabId={zone.name} key={"tabkey "+ zone.id}>
       <Row className="mt-4">
         <Col className="col-md-12"> 
           { props.editMode ?
@@ -31,16 +31,20 @@ const zone = props => {
   ))
   return (
     <Container>
-      <Header header="Zones" />
+      <Header header={"Zones"} />
       <section className={styles.ZoneSection}>
+        <Row>
+          <Col className="md-12 mb-2"><h6 className={props.activeZoneTab}>{props.activeZoneTab} Zone: {editTitle}</h6></Col>
+          <hr />
+        </Row>
         <Row>
           <Col className="md-12">
             <ButtonGroup>
               { props.zones.map((zone, index) => (
                 <Button 
                   key={"zone_name " + zone.id} 
-                  className={classnames({ active: props.activeZoneTab === "tab " + index })}
-                  onClick={() => { props.toggleZoneTab("tab " + index) }}
+                  className={classnames({ active: props.activeZoneTab === zone.name })}
+                  onClick={() => { props.toggleZoneTab(zone.name) }}
                 >
                   {zone.name}
                 </Button>

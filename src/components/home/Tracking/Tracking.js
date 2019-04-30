@@ -2,14 +2,18 @@ import React from 'react'
 import Header from '../../layouts/Header'
 import TrackingUpdates from './TrackingUpdates'
 import styles from '../../../stylesheets/Tracking.module.css'
-import { Container, 
+import { Container, ButtonGroup,
   Row, Col, InputGroup, InputGroupAddon, Input, Button, Form, FormGroup, Label,
   Progress  } from 'reactstrap'
 
 const tracking = props => {
   return (
-    <Container>
+    <Container className="text-center">
       <Header header="Tracking" />
+      <ButtonGroup>
+        <Button>Arrivals</Button>
+        <Button>Departures</Button>
+      </ButtonGroup>
       <div className="text-center">35%</div>
       <Progress value={35} striped color="warning" className="mb-4" />
       <Row>
