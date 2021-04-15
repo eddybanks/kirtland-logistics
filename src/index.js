@@ -4,25 +4,25 @@ import './stylesheets/index.css';
 import App from './components/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
-import { ApolloProvider } from 'react-apollo'
-import { ApolloClient } from 'apollo-client'
-import { createHttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
+// import { ApolloProvider } from 'react-apollo'
+// import { ApolloClient } from 'apollo-client'
+// import { createHttpLink } from 'apollo-link-http'
+// import { InMemoryCache } from 'apollo-cache-inmemory'
 
-const httpLink = createHttpLink({
-  uri: 'https://kirtland-airshows.herokuapp.com/'
-})
+// const httpLink = createHttpLink({
+//   uri: 'https://kirtland-airshows.herokuapp.com/'
+// })
 
-const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
-  typeDefs: './src/schema.graphql'
-})
+// const client = new ApolloClient({
+//   link: httpLink,
+//   cache: new InMemoryCache(),
+//   typeDefs: './src/schema.graphql'
+// })
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  // <ApolloProvider client={client}>
     <App />
-  </ApolloProvider>
+  // {/* </ApolloProvider> */}
   , document.getElementById('root')
 )
 

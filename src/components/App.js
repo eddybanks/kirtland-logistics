@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styles from '../stylesheets/App.module.css'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
-import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
+// import { Query } from 'react-apollo'
+// import gql from 'graphql-tag'
 
 import Navigation from './layouts/Navigation'
 import Footer from './layouts/Footer'
@@ -13,11 +13,11 @@ import TrackingContainer from './home/Tracking/TrackingContainer'
 import Register from './home/Landing/Register/Register'
 import Login from './home/Landing/Login/Login'
 
-const GET_INFO = gql`
-  query {
-    info
-  }
-`
+// const GET_INFO = gql`
+//   query {
+//     info
+//   }
+// `
 class App extends Component {
   state = {
     logged_in: true
